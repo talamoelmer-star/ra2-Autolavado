@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar servicio | AUTO CLEAN</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+
+<header class="barra">
+    <h2>🚘 AUTO CLEAN</h2>
+    <nav>
+        <a href="/app1/">Inicio</a>
+        <a href="/app2/">Registrar servicio</a>
+    </nav>
+</header>
+
+<main class="contenedor">
+
+    <section class="encabezado">
+        <span class="etiqueta">NUEVO REGISTRO</span>
+        <h1>Registrar servicio de lavado</h1>
+        <p>Completa los datos del cliente y selecciona el servicio.</p>
+    </section>
+
+    <form id="formulario" class="tarjeta">
+
+        <div class="rejilla">
+
+            <label class="campo">
+                Nombre del cliente
+                <input type="text" id="cliente" placeholder="Ingrese nombre">
+            </label>
+
+            <label class="campo">
+                DNI
+                <input type="text" id="dni" maxlength="8" placeholder="8 dígitos">
+            </label>
+
+            <label class="campo">
+                Placa del vehículo
+                <input type="text" id="placa" placeholder="ABC-123">
+            </label>
+
+            <label class="campo">
+                Tipo de vehículo
+                <select id="vehiculo">
+                    <option value="">Seleccione</option>
+                    <option>Automóvil</option>
+                    <option>Camioneta</option>
+                    <option>Motocicleta</option>
+                    <option>Camioneta SUV</option>
+                </select>
+            </label>
+
+            <label class="campo">
+                Servicio
+                <select id="servicio">
+                    <option value="">Seleccione servicio</option>
+                    <option value="15">Lavado básico - S/ 15</option>
+                    <option value="25">Lavado completo - S/ 25</option>
+                    <option value="40">Lavado premium - S/ 40</option>
+                    <option value="60">Lavado y encerado - S/ 60</option>
+                </select>
+            </label>
+
+            <label class="campo">
+                Cantidad de servicios
+                <input type="number" id="cantidad" min="1" max="10" value="1">
+            </label>
+
+            <label class="campo">
+                Fecha del servicio
+                <input type="date" id="fecha">
+            </label>
+
+        </div>
+
+        <div class="resumen">
+            <h3>Resumen de pago</h3>
+            <p>Precio unitario: <strong id="precio">S/ 0.00</strong></p>
+            <p>Cantidad: <strong id="unidades">1</strong></p>
+            <h2>Total: <span id="total">S/ 0.00</span></h2>
+        </div>
+
+        <div class="acciones">
+            <button type="submit" class="boton">Registrar servicio</button>
+            <a href="/app1/" class="boton secundario">Volver</a>
+        </div>
+
+        <p id="mensaje"></p>
+
+    </form>
+</main>
+
+<script src="/componentes/app.js"></script>
+</body>
+</html>
